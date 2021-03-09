@@ -37,4 +37,22 @@ describe('Promise', () => {
         //@ts-ignore
         assert(called === true)
     })
+    it('promise.then(success) 中的 success 会在 resolve 被调用的时候执行', (done) => {
+        let called = false
+        const promise = new Promise((resolve, reject) => {
+            //该函数没有执行
+            assert(called === false)
+            resolve()
+            //该函数执行了
+            setTimeout(() => {
+                assert(called === true)
+            }, 0);
+            console.log('代码执行了')
+            done()
+        })
+        //@ts-ignore
+        promise.then(() => {
+            called = true
+        })
+    })
 })
