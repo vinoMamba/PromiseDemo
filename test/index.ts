@@ -26,7 +26,6 @@ describe('Promise', () => {
         //@ts-ignore
         assert(called === true)
     })
-
     it('new Promise(fn) 中的fn接收resolve和reject两个函数', () => {
         let called = false
         const promise = new Promise((resolve, reject) => {
@@ -46,9 +45,8 @@ describe('Promise', () => {
             //该函数执行了
             setTimeout(() => {
                 assert(called === true)
+                done()
             }, 0);
-            console.log('代码执行了')
-            done()
         })
         //@ts-ignore
         promise.then(() => {
