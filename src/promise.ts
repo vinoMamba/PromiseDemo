@@ -4,17 +4,19 @@ class PromiseVino {
     state = "pending"
     resolve(result) {
         setTimeout(() => {
+            if (this.state !== 'pending') return
             this.state = 'fulfilled'
             if (typeof this.succeed === 'function') {
                 this.succeed(result)
             }
         }, 0);
     }
-    reject() {
+    reject(reason) {
         setTimeout(() => {
+            if (this.state !== 'pending') return
             this.state = 'rejected'
             if (typeof this.failed === 'function') {
-                this.failed()
+                this.failed(reason)
             }
         }, 0);
     }

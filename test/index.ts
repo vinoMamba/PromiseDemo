@@ -73,14 +73,54 @@ describe('Promise', () => {
         const succeed = sinon.fake()
         const promise = new Promise((resolve) => {
             assert.isFalse(succeed.called)
-            resolve(233)
+            resolve(123)
+            resolve(1234)
             setTimeout(() => {
                 assert(promise.state === 'fulfilled')
-                assert.isTrue(succeed.called)
-                assert(succeed.calledWith(233))
+                assert.isTrue(succeed.calledOnce)
+                assert(succeed.calledWith(123))
                 done()
             }, 0);
         })
         promise.then(succeed)
+    })
+    it('2.2.3', (done) => {
+        const fail = sinon.fake()
+        const promise = new Promise((resolve, reject) => {
+            assert.isFalse(fail.called)
+            reject(123)
+            reject(1234)
+            setTimeout(() => {
+                assert(promise.state === 'rejected')
+                assert.isTrue(fail.calledOnce)
+                assert(fail.calledWith(123))
+                done()
+            }, 0);
+        })
+        promise.then(null, fail)
+    })
+    it('在我的代码执行完之前，不得调用then后面的两个函数', (done) => {
+        const succeed = sinon.fake()
+        const promise = new Promise((resolve, reject) => {
+            resolve()
+        })
+        promise.then(succeed)
+        assert.isFalse(succeed.called)
+        setTimeout(() => {
+            assert.isTrue(succeed.called)
+            done()
+        }, 0);
+    })
+    it('在我的代码执行完之前，不得调用then后面的两个函数', (done) => {
+        const fail = sinon.fake()
+        const promise = new Promise((resolve, reject) => {
+            reject()
+        })
+        promise.then(null, fail)
+        assert.isFalse(fail.called)
+        setTimeout(() => {
+            assert.isTrue(fail.called)
+            done()
+        }, 0);
     })
 })
