@@ -2,7 +2,35 @@
 # yarn lockfile v1
 
 
-"@types/chai@^4.2.15":
+"@sinonjs/commons@^1.6.0", "@sinonjs/commons@^1.7.0", "@sinonjs/commons@^1.8.1":
+  version "1.8.2"
+  resolved "http://nexus.h3yun.com:8888/repository/npm-all/@sinonjs/commons/-/commons-1.8.2.tgz#858f5c4b48d80778fde4b9d541f27edc0d56488b"
+  integrity sha1-hY9cS0jYB3j95LnVQfJ+3A1WSIs=
+  dependencies:
+    type-detect "4.0.8"
+
+"@sinonjs/fake-timers@^6.0.0", "@sinonjs/fake-timers@^6.0.1":
+  version "6.0.1"
+  resolved "http://nexus.h3yun.com:8888/repository/npm-all/@sinonjs/fake-timers/-/fake-timers-6.0.1.tgz#293674fccb3262ac782c7aadfdeca86b10c75c40"
+  integrity sha1-KTZ0/MsyYqx4LHqt/eyoaxDHXEA=
+  dependencies:
+    "@sinonjs/commons" "^1.7.0"
+
+"@sinonjs/samsam@^5.3.1":
+  version "5.3.1"
+  resolved "http://nexus.h3yun.com:8888/repository/npm-all/@sinonjs/samsam/-/samsam-5.3.1.tgz#375a45fe6ed4e92fca2fb920e007c48232a6507f"
+  integrity sha1-N1pF/m7U6S/KL7kg4AfEgjKmUH8=
+  dependencies:
+    "@sinonjs/commons" "^1.6.0"
+    lodash.get "^4.4.2"
+    type-detect "^4.0.8"
+
+"@sinonjs/text-encoding@^0.7.1":
+  version "0.7.1"
+  resolved "http://nexus.h3yun.com:8888/repository/npm-all/@sinonjs/text-encoding/-/text-encoding-0.7.1.tgz#8da5c6530915653f3a1f38fd5f101d8c3f8079c5"
+  integrity sha1-jaXGUwkVZT86Hzj9XxAdjD+AecU=
+
+"@types/chai@*", "@types/chai@^4.2.15":
   version "4.2.15"
   resolved "http://nexus.h3yun.com:8888/repository/npm-all/@types/chai/-/chai-4.2.15.tgz#b7a6d263c2cecf44b6de9a051cf496249b154553"
   integrity sha1-t6bSY8LOz0S23poFHPSWJJsVRVM=
@@ -11,6 +39,26 @@
   version "8.2.1"
   resolved "http://nexus.h3yun.com:8888/repository/npm-all/@types/mocha/-/mocha-8.2.1.tgz#f3f3ae4590c5386fc7c543aae9b78d4cf30ffee9"
   integrity sha1-8/OuRZDFOG/HxUOq6beNTPMP/uk=
+
+"@types/sinon-chai@^3.2.5":
+  version "3.2.5"
+  resolved "http://nexus.h3yun.com:8888/repository/npm-all/@types/sinon-chai/-/sinon-chai-3.2.5.tgz#df21ae57b10757da0b26f512145c065f2ad45c48"
+  integrity sha1-3yGuV7EHV9oLJvUSFFwGXyrUXEg=
+  dependencies:
+    "@types/chai" "*"
+    "@types/sinon" "*"
+
+"@types/sinon@*", "@types/sinon@^9.0.11":
+  version "9.0.11"
+  resolved "http://nexus.h3yun.com:8888/repository/npm-all/@types/sinon/-/sinon-9.0.11.tgz#7af202dda5253a847b511c929d8b6dda170562eb"
+  integrity sha1-evIC3aUlOoR7URySnYtt2hcFYus=
+  dependencies:
+    "@types/sinonjs__fake-timers" "*"
+
+"@types/sinonjs__fake-timers@*":
+  version "6.0.2"
+  resolved "http://nexus.h3yun.com:8888/repository/npm-all/@types/sinonjs__fake-timers/-/sinonjs__fake-timers-6.0.2.tgz#3a84cf5ec3249439015e14049bd3161419bf9eae"
+  integrity sha1-OoTPXsMklDkBXhQEm9MWFBm/nq4=
 
 "@ungap/promise-all-settled@1.1.2":
   version "1.1.2"
@@ -197,7 +245,7 @@ diff@5.0.0:
   resolved "http://nexus.h3yun.com:8888/repository/npm-all/diff/-/diff-5.0.0.tgz#7ed6ad76d859d030787ec35855f5b1daf31d852b"
   integrity sha1-ftatdthZ0DB4fsNYVfWx2vMdhSs=
 
-diff@^4.0.1:
+diff@^4.0.1, diff@^4.0.2:
   version "4.0.2"
   resolved "http://nexus.h3yun.com:8888/repository/npm-all/diff/-/diff-4.0.2.tgz#60f3aecb89d5fae520c11aa19efc2bb982aade7d"
   integrity sha1-YPOuy4nV+uUgwRqhnvwruYKq3n0=
@@ -343,6 +391,11 @@ is-plain-obj@^2.1.0:
   resolved "http://nexus.h3yun.com:8888/repository/npm-all/is-plain-obj/-/is-plain-obj-2.1.0.tgz#45e42e37fccf1f40da8e5f76ee21515840c09287"
   integrity sha1-ReQuN/zPH0Dajl927iFRWEDAkoc=
 
+isarray@0.0.1:
+  version "0.0.1"
+  resolved "http://nexus.h3yun.com:8888/repository/npm-all/isarray/-/isarray-0.0.1.tgz#8a18acfca9a8f4177e09abfc6038939b05d1eedf"
+  integrity sha1-ihis/Kmo9Bd+Cav8YDiTmwXR7t8=
+
 isexe@^2.0.0:
   version "2.0.0"
   resolved "http://nexus.h3yun.com:8888/repository/npm-all/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
@@ -355,12 +408,22 @@ js-yaml@4.0.0:
   dependencies:
     argparse "^2.0.1"
 
+just-extend@^4.0.2:
+  version "4.1.1"
+  resolved "http://nexus.h3yun.com:8888/repository/npm-all/just-extend/-/just-extend-4.1.1.tgz#158f1fdb01f128c411dc8b286a7b4837b3545282"
+  integrity sha1-FY8f2wHxKMQR3IsoantIN7NUUoI=
+
 locate-path@^6.0.0:
   version "6.0.0"
   resolved "http://nexus.h3yun.com:8888/repository/npm-all/locate-path/-/locate-path-6.0.0.tgz#55321eb309febbc59c4801d931a72452a681d286"
   integrity sha1-VTIeswn+u8WcSAHZMackUqaB0oY=
   dependencies:
     p-locate "^5.0.0"
+
+lodash.get@^4.4.2:
+  version "4.4.2"
+  resolved "http://nexus.h3yun.com:8888/repository/npm-all/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
+  integrity sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=
 
 log-symbols@4.0.0:
   version "4.0.0"
@@ -427,6 +490,17 @@ nanoid@3.1.20:
   resolved "http://nexus.h3yun.com:8888/repository/npm-all/nanoid/-/nanoid-3.1.20.tgz#badc263c6b1dcf14b71efaa85f6ab4c1d6cfc788"
   integrity sha1-utwmPGsdzxS3HvqoX2q0wdbPx4g=
 
+nise@^4.0.4:
+  version "4.1.0"
+  resolved "http://nexus.h3yun.com:8888/repository/npm-all/nise/-/nise-4.1.0.tgz#8fb75a26e90b99202fa1e63f448f58efbcdedaf6"
+  integrity sha1-j7daJukLmSAvoeY/RI9Y77ze2vY=
+  dependencies:
+    "@sinonjs/commons" "^1.7.0"
+    "@sinonjs/fake-timers" "^6.0.0"
+    "@sinonjs/text-encoding" "^0.7.1"
+    just-extend "^4.0.2"
+    path-to-regexp "^1.7.0"
+
 normalize-path@^3.0.0, normalize-path@~3.0.0:
   version "3.0.0"
   resolved "http://nexus.h3yun.com:8888/repository/npm-all/normalize-path/-/normalize-path-3.0.0.tgz#0dcd69ff23a1c9b11fd0978316644a0388216a65"
@@ -462,6 +536,13 @@ path-is-absolute@^1.0.0:
   version "1.0.1"
   resolved "http://nexus.h3yun.com:8888/repository/npm-all/path-is-absolute/-/path-is-absolute-1.0.1.tgz#174b9268735534ffbc7ace6bf53a5a9e1b5c5f5f"
   integrity sha1-F0uSaHNVNP+8es5r9TpanhtcX18=
+
+path-to-regexp@^1.7.0:
+  version "1.8.0"
+  resolved "http://nexus.h3yun.com:8888/repository/npm-all/path-to-regexp/-/path-to-regexp-1.8.0.tgz#887b3ba9d84393e87a0a0b9f4cb756198b53548a"
+  integrity sha1-iHs7qdhDk+h6CgufTLdWGYtTVIo=
+  dependencies:
+    isarray "0.0.1"
 
 pathval@^1.1.1:
   version "1.1.1"
@@ -503,6 +584,23 @@ serialize-javascript@5.0.1:
   integrity sha1-eIbshIBJpGJGepfT2Rjrsqr5NPQ=
   dependencies:
     randombytes "^2.1.0"
+
+sinon-chai@^3.5.0:
+  version "3.5.0"
+  resolved "http://nexus.h3yun.com:8888/repository/npm-all/sinon-chai/-/sinon-chai-3.5.0.tgz#c9a78304b0e15befe57ef68e8a85a00553f5c60e"
+  integrity sha1-yaeDBLDhW+/lfvaOioWgBVP1xg4=
+
+sinon@^9.2.4:
+  version "9.2.4"
+  resolved "http://nexus.h3yun.com:8888/repository/npm-all/sinon/-/sinon-9.2.4.tgz#e55af4d3b174a4443a8762fa8421c2976683752b"
+  integrity sha1-5Vr007F0pEQ6h2L6hCHCl2aDdSs=
+  dependencies:
+    "@sinonjs/commons" "^1.8.1"
+    "@sinonjs/fake-timers" "^6.0.1"
+    "@sinonjs/samsam" "^5.3.1"
+    diff "^4.0.2"
+    nise "^4.0.4"
+    supports-color "^7.1.0"
 
 source-map-support@^0.5.17:
   version "0.5.19"
@@ -586,7 +684,7 @@ ts-node@^9.1.1:
     source-map-support "^0.5.17"
     yn "3.1.1"
 
-type-detect@^4.0.0, type-detect@^4.0.5:
+type-detect@4.0.8, type-detect@^4.0.0, type-detect@^4.0.5, type-detect@^4.0.8:
   version "4.0.8"
   resolved "http://nexus.h3yun.com:8888/repository/npm-all/type-detect/-/type-detect-4.0.8.tgz#7646fb5f18871cfbb7749e69bd39a6388eb7450c"
   integrity sha1-dkb7XxiHHPu3dJ5pvTmmOI63RQw=
