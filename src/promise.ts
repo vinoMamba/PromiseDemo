@@ -1,14 +1,21 @@
 class PromiseVino {
     succeed = null
     failed = null
-    resolve() {
+    state = "pending"
+    resolve(result) {
         setTimeout(() => {
-            this.succeed()
+            this.state = 'fulfilled'
+            if (typeof this.succeed === 'function') {
+                this.succeed(result)
+            }
         }, 0);
     }
     reject() {
         setTimeout(() => {
-            this.failed()
+            this.state = 'rejected'
+            if (typeof this.failed === 'function') {
+                this.failed()
+            }
         }, 0);
     }
     constructor(fn) {
@@ -17,9 +24,13 @@ class PromiseVino {
         }
         fn(this.resolve.bind(this), this.reject.bind(this))
     }
-    then(succeed, failed) {
-        this.succeed = succeed
-        this.failed = failed
+    then(succeed?, failed?) {
+        if (typeof succeed === "function") {
+            this.succeed = succeed
+        }
+        if (typeof failed === "function") {
+            this.failed = failed
+        }
     }
 }
 
