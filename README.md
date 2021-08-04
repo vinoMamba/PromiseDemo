@@ -1,2 +1,2 @@
-# PromiseDemo
-手写promise
+# 手写Promise
+
